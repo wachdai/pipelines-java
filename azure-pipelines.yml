@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: three-uat
+  name: default
+  demands: 
+  - Agent.Name -equals three-uat
 
 steps:
 - task: Maven@3
